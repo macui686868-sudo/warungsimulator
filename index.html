@@ -198,7 +198,7 @@
       <h2 id="judul-game" class="section__title">Pilih Game Warung</h2>
       <p class="section__lead">Semua game di bawah ini jalan di dalam halaman, jadi kamu tidak perlu pindah aplikasi.</p>
 
-      <ul class="game-grid">
+            <ul class="game-grid">
         <li class="card card--kopi" onclick="openGame()" style="cursor: pointer;">
           <!-- ▼ GANTI: nama + satu kalimat penjelasan game 1 -->
           <div class="card__head">
@@ -208,12 +208,11 @@
               <p class="card__desc">Jualan kopi, teh, dan gorengan; layani pembeli yang datang makin ramai.</p>
             </div>
           </div>
-          <div class="card__thumb" aria-hidden="true">
-            <span class="card__emoji">☕</span>
-            <span class="card__thumb-tag">Kopi · Teh · Gorengan</span>
+          <!-- 保留frame盒子维持卡片大小，内部放彩色占位，删除假iframe -->
+          <div class="frame" style="background:linear-gradient(135deg,#ff782e,#ffb26b);display:flex;align-items:center;justify-content:center;color:white;font-size:48px;">
+            ☕
           </div>
         </li>
-
         <li class="card card--kelontong" onclick="openGame()" style="cursor: pointer;">
           <!-- ▼ GANTI: nama + satu kalimat penjelasan game 2 -->
           <div class="card__head">
@@ -223,12 +222,10 @@
               <p class="card__desc">Atur stok sembako, hitung kembalian, dan jaga rak supaya tidak kosong.</p>
             </div>
           </div>
-          <div class="card__thumb" aria-hidden="true">
-            <span class="card__emoji">🛒</span>
-            <span class="card__thumb-tag">Stok · Kembalian · Rak</span>
+          <div class="frame" style="background:linear-gradient(135deg,#279e74,#62d2a8);display:flex;align-items:center;justify-content:center;color:white;font-size:48px;">
+            🛒
           </div>
         </li>
-
         <li class="card card--makan" onclick="openGame()" style="cursor: pointer;">
           <!-- ▼ GANTI: nama + satu kalimat penjelasan game 3 -->
           <div class="card__head">
@@ -238,9 +235,8 @@
               <p class="card__desc">Masak pesanan sederhana, tambah meja, dan bikin warungmu makin ramai.</p>
             </div>
           </div>
-          <div class="card__thumb" aria-hidden="true">
-            <span class="card__emoji">🍜</span>
-            <span class="card__thumb-tag">Masak · Meja · Ramai</span>
+          <div class="frame" style="background:linear-gradient(135deg,#e85b78,#ff94a8);display:flex;align-items:center;justify-content:center;color:white;font-size:48px;">
+            🍜
           </div>
         </li>
       </ul>
@@ -383,24 +379,6 @@ function closeGame() {
 
 <script>
   document.getElementById('tahun').textContent = new Date().getFullYear();
-  // 封面占位：在旧 iframe 预览框位置显示渐变封面，恢复卡片高度与视觉
-  if (!document.querySelector('style#thumb-style')) {
-    const css = [
-      '.card{display:flex;flex-direction:column;gap:14px;}',
-      '.card__thumb{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:150px;border-radius:14px;overflow:hidden;text-align:center;}',
-      '.card__emoji{font-size:46px;line-height:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.18));}',
-      '.card__thumb-tag{display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.85);font-size:13px;font-weight:600;color:#5b3a29;}',
-      '.card--kopi .card__thumb{background:linear-gradient(135deg,#f6b26b 0%,#e8823a 55%,#d96422 100%);}',
-      '.card--kelontong .card__thumb{background:linear-gradient(135deg,#7fd8c6 0%,#3fb6a0 55%,#2b9481 100%);}',
-      '.card--makan .card__thumb{background:linear-gradient(135deg,#f7a8c4 0%,#e5649a 55%,#c94482 100%);}',
-      '.card:hover .card__thumb{transform:translateY(-3px);transition:transform .2s ease;}',
-      '@media(max-width:640px){.card__thumb{min-height:120px;}.card__emoji{font-size:38px;}}'
-    ].join('');
-    const st = document.createElement('style');
-    st.id = 'thumb-style';
-    st.textContent = css;
-    document.head.appendChild(st);
-  }
 </script>
 </body>
 </html>
