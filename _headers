@@ -1,0 +1,16 @@
+/*
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: index, follow
+
+/*.png
+  Cache-Control: public, max-age=86400
+/*.jpg
+  Cache-Control: public, max-age=86400
+/*.webp
+  Cache-Control: public, max-age=86400
+/*.css
+  Cache-Control: public, max-age=86400
+/*.js
+  Cache-Control: public, max-age=86400
+/*.svg
+  Cache-Control: public, max-age=86400
