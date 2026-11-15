@@ -1,0 +1,9 @@
+# Simulator Warung
+
+> Kumpulan game simulasi buka warung (warung simulator) yang bisa dimainkan langsung di browser HP, gratis dan tanpa download. Situs berbahasa Indonesia untuk pemain di Indonesia.
+
+- Halaman utama: https://warungsimulator.com/
+- Isi: 3 game warung yang disematkan lewat iframe dari pengembang pihak ketiga (GameMonetize / GamePix); semua game tetap milik pemiliknya masing-masing.
+- Penjelasan: arti game simulator warung, cara main, dan siapa yang cocok memainkannya.
+- FAQ: 5 pertanyaan umum (bisa dimainkan di HP, perlu download atau tidak, gratis atau tidak, cara memainkan di browser) — juga tersedia sebagai data terstruktur FAQPage.
+- Karakter situs: satu halaman statis, tanpa pendaftaran akun, tanpa aplikasi, tanpa backend.

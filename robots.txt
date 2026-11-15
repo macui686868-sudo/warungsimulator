@@ -1,0 +1,5 @@
+# warungsimulator.com
+User-agent: *
+Allow: /
+
+Sitemap: https://warungsimulator.com/sitemap.xml
